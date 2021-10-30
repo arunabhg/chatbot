@@ -11,8 +11,8 @@ class MessageParser {
 			this.actionProvider.greet();
 		}
 
-		if (lowerCaseMessage.includes('javascript')) {
-			this.actionProvider.handleJavascriptList();
+		if (lowerCaseMessage.includes('assistance') || lowerCaseMessage.includes('roadside')) {
+			this.actionProvider.handleRoadsideList();
 		}
 	}
 }

@@ -20,11 +20,11 @@ class ActionProvider {
 		this.updateChatbotState(greetingMessage);
 	}
 
-	handleJavascriptList = () => {
+	handleRoadsideList = () => {
 		const message = this.createChatBotMessage(
-			"Fantastic, I've got the following resources for you on Javascript:",
+			"Okay, I've got the following resources for you on Roadside Assistance:",
 			{
-				widget: 'javascriptLinks'
+				widget: 'roadsideLinks'
 			}
 		);
 

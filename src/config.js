@@ -1,16 +1,16 @@
 // Config starter code
 import { createChatBotMessage } from 'react-chatbot-kit';
 
-import LearningOptions from './components/LearningOptions/LearningOptions';
+import LearningOptions from './components/Options/Options';
 import LinkList from './components/LinkList/LinkList';
 
+const botName = 'Axle';
+
 const config = {
-	botName: 'LearningBot',
 	initialMessages: [
-		createChatBotMessage(`Hi, I'm here to help. What do you want to learn?`, {
-			widget: 'learningOptions'
-		})
+		createChatBotMessage(`Hi! I'm ${botName}. How can I help you?`, { widget: 'learningOptions' })
 	],
+	botName: botName,
 	customStyles: {
 		botMessageBox: {
 			backgroundColor: '#376B7E'
@@ -25,23 +25,23 @@ const config = {
 			widgetFunc: (props) => <LearningOptions {...props} />
 		},
 		{
-			widgetName: 'javascriptLinks',
+			widgetName: 'roadsideLinks',
 			widgetFunc: (props) => <LinkList {...props} />,
 			props: {
 				options: [
 					{
-						text: 'Introduction to JS',
-						url: 'https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/',
+						text: 'Vehicle Towing',
+						url: '#',
 						id: 1
 					},
 					{
-						text: 'Mozilla JS Guide',
-						url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide',
+						text: 'Engine Breakdown',
+						url: '#',
 						id: 2
 					},
 					{
-						text: 'Frontend Masters',
-						url: 'https://frontendmasters.com',
+						text: 'Petrol Requirement',
+						url: '#',
 						id: 3
 					}
 				]
