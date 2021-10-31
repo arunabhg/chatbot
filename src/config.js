@@ -1,6 +1,6 @@
 // Config starter code
 import { createChatBotMessage } from 'react-chatbot-kit';
-
+import AxleAvatar from './AxleAvatar';
 import LearningOptions from './components/Options/Options';
 import LinkList from './components/LinkList/LinkList';
 
@@ -19,6 +19,7 @@ const config = {
 			backgroundColor: '#376B7E'
 		}
 	},
+	customComponents: { botAvatar: (props) => <AxleAvatar {...props} /> },
 	widgets: [
 		{
 			widgetName: 'learningOptions',
