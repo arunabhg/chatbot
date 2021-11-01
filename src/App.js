@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Chatbot from 'react-chatbot-kit';
 import { Fade, Flip } from 'react-reveal';
 import 'react-chatbot-kit/build/main.css';
+import { useReactToPrint } from 'react-to-print';
 import './App.css';
+import ComponentToPrint from './ComponentToPrint';
 
 import ActionProvider from './ActionProvider';
 import MessageParser from './MessageParser';
@@ -10,9 +12,25 @@ import config from './config';
 
 function App() {
 	const [showBot, toggleBot] = useState(false);
+	const componentRef = useRef();
+	const handlePrint = useReactToPrint({
+		content: () => componentRef.current
+	});
 
 	return (
 		<div className='App'>
+			<div className='print'>
+				<ComponentToPrint ref={componentRef} />
+			</div>
+			<div className='printButton'>
+				<button onClick={handlePrint}>Print This!</button>
+			</div>
+
+			<Fade bottom cascade>
+				<h1>Vehicle-Service-Chatbot</h1>
+				<h2>Start chatting with Axle!</h2>
+				<h3>Type in Hi and see what happens...</h3>
+			</Fade>
 			{showBot && (
 				<Fade big>
 					<div className='app-chatbot-container'>

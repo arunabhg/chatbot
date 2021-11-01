@@ -69,3 +69,19 @@
 .app-chatbot-button-icon {
 	fill: #fff;
 }
+
+.print {
+	display: flex;
+	justify-content: start;
+	position: fixed;
+	left: 5%;
+	width: 100px;
+	height: 200px;
+}
+
+.printButton {
+	display: flex;
+	left: 5%;
+	position: absolute;
+	top: 90%;
+}
