@@ -81,7 +81,14 @@
 
 .printButton {
 	display: flex;
-	left: 5%;
+	left: 8%;
 	position: absolute;
 	top: 90%;
+}
+
+.printBlock {
+	box-sizing: border-box;
+	text-align: left;
+	margin: 10px 10px;
+	padding: 5px 5px;
 }
