@@ -1,9 +1,11 @@
 import React from 'react';
-
+// Though we can have either class or functional components as the ComponentToPrint
+// but The component to be printed should be a class component
+// As it's simpler to get a ref and use the useReactToPrint hook of react-to-print
 class ComponentToPrint extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className='printBlock'>
 				<div>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas atque repellendus ab
 					porro quos nam rem doloribus facere hic maiores, iusto architecto officia totam sequi
